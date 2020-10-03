@@ -4,13 +4,13 @@ import java.util.HashSet;
 public class PairsClass {
 	public static void main(String[] args)
 	{
-		int[] arr = new int[]{1,1,1};
-		System.out.println("Number of pairs: "+ getPairs(arr, 2));
+		int[] arr = new int[]{1,1,1}; // creating object of array 
+		System.out.println("Number of pairs: "+ getPairs(arr, 2)); // calling the function getpair(arr,2) where arr and 2 are passed arguments
 	}
 
-	public static int getPairs(int[] a, int k)
+	public static int getPairs(int[] a, int k)  //function definition
 	{
-	 int numPairs = 0;
+	 int numPairs = 0; // variable that stores the pair
 	    HashMap<Integer, Integer> hs = new HashMap<Integer, Integer>();
 	    HashSet<Integer> seen = new HashSet<Integer>();
 	    hs.put(a[0],1);
@@ -59,12 +59,12 @@ public class PairsClass {
 	    return permutation(n) / (permutation(k) * permutation(n - k));
 	}
 
-	public static int permutation(int i)
+	public static int permutation(int i) //fuction calculating factorial of number i
 	{
 	    if (i == 1)
 	    {
-	        return 1;
+	        return 1; // base condition 
 	    }
-	    return i * permutation(i - 1);
+	    return i * permutation(i - 1); //recursive call
 	}
 }
